@@ -1,0 +1,87 @@
+@media (max-width: 640px) {
+    .backgroundwrap {
+        background:
+                linear-gradient(
+                        rgba(80, 89, 107, 0.7),
+                        rgba(80, 89, 107, 0)
+                ),
+                url("../Bilder/Start/start2.png") !important;
+        height: 800px !important;
+    }
+    .videotext h1 {
+        font-size: 4rem !important;
+    }
+    .slogan {
+       font-size: 1.8rem !important;
+        margin-top: 20px;
+        margin-right: 50px !important;
+    }
+    .bannertext {
+        font-size: 2rem !important;
+        margin-top: 30px !important;
+    }
+    #comments {
+        font-size: 1.2rem !important;
+    }
+}
+@media (max-width: 1320px) and (min-width: 641px) {
+    .backgroundwrap {
+        height: 1000px !important;
+    }
+
+}
+
+.backgroundwrap {
+    background:
+    linear-gradient(
+      rgba(80, 89, 107, 0.7),
+      rgba(80, 89, 107, 0)
+    ), 
+    url("../Bilder/Start/start.png");
+    
+    z-index: 1;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    height: 1400px;
+  }
+
+.videotext {
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+.videotext h1 {
+    font-size: 7rem;
+    margin-bottom: -35px;
+}
+
+.slogan {
+  text-align: center;
+    margin-right: 140px;
+  font-size: 2.5rem;
+}
+
+.quotes {
+    margin-top: 80px;
+    font-size: 3rem;
+}
+
+.bannertext {
+    opacity: 1;
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -ms-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+}
+.hideQuote {
+    opacity: 0 !important;
+}
+
+.hrlinevid {
+    padding: 0;
+}

@@ -1,0 +1,166 @@
+.nav-scroll {
+    background-color: #fff !important;
+    position: fixed !important;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+    top: -100px !important;
+    transform: translateY(100px);
+    transition: transform .5s;
+  }
+  
+  .navbar {
+    background-color: transparent;
+    left: 0;
+    min-height: 70px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    letter-spacing: 0.05em;
+    font-size: 1.1rem;
+  }
+  
+  .navlogo {
+    color: #fff;
+    font-size: 2rem;
+  }
+  .navlogorecht {
+    color: #333333;
+    font-size: 2rem;
+  }
+  .navlogo:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .nav-link{
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  .nav-link.scroll {
+    color: #111;
+  }
+
+  .nav-link.scroll:hover {
+    color: #FFC857;
+  }
+  
+  /*Responsive*/
+  
+  @media (max-width: 991px) {
+    .responsenav {
+      display: none;
+    }
+    .burgernav {
+      right: 20px;
+      position: absolute;
+    }
+  }
+  @media (min-width: 992px) {
+    .burgernav {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .slideleft {
+      width: 300px !important;
+    }
+    .menuopen {
+      font-size: 1.3rem;
+      height: 400px;
+      
+    }
+  }
+
+  .navslideleft {
+    width: 300px !important;
+    height: auto;
+    z-index: 6 !important;
+  }
+  
+  .navlistresponse {
+    position: fixed !important;
+  }
+  
+  .nonavmain {
+    background: rgba(0,0,0,.7);
+    height: 100%;
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+  }
+  
+  .dim-main {
+    display: block !important;
+  }
+  
+  #opennav {
+    z-index: 7;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+  }
+  
+  .iconburger {
+    float: right;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 7;
+  }
+  
+  .burger {
+    width: 35px;
+    height: 4px;
+    background-color: #333333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+  }
+
+  .burger:before,
+  .burger:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: "";
+    width: 35px;
+    height: 4px;
+    background-color: #333333;
+    position: absolute;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    transition: .4s;
+  }
+
+  
+  .burger:before {
+    top: -10px;
+  }
+  
+  .burger:after {
+    top: 14px;
+  }
+
+  .iconburger.active .burger {
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0,0,0,0);
+  }
+  
+  .iconburger.active .burger:before {
+    transform: rotate(45deg);
+    background-color: #fff;
+    top: 0;
+    left: 0px;
+  }
+  
+  .iconburger.active .burger:after {
+    transform: rotate(-45deg);
+    background-color: #fff;
+    top: 0;
+    left: 0px;
+  }
