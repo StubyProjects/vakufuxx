@@ -11,10 +11,10 @@ class DBConnect
     private $charset;
 
     public function connect() {
-        $this->servername = getenv('DB_SERVERNAME_LC');
-        $this->username = getenv('DB_USERNAME_LC');
-        $this->password = getenv('DB_PASSWORD_LC');
-        $this->dbname = getenv('DB_TABLENAME_LC');
+        $this->servername = getenv('DB_SERVERNAME_PC');
+        $this->username = getenv('DB_USERNAME_PC');
+        $this->password = getenv('DB_PASSWORD_PC');
+        $this->dbname = getenv('DB_TABLENAME_PC');
         $this->charset = "utf8mb4";
         try {
             $connect = "mysql:host=".$this->servername.";dbname=".$this->dbname.";charset=".$this->charset;

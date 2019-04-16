@@ -249,7 +249,7 @@ $preis = $calculatePrice + 1.99;
                 loaderOff();
                 // Set up PayPal with the checkout.js library
                 paypal.Button.render({
-                    env: 'sandbox' , // or  'production',
+                    env: 'production' , // or  'sandbox',
                     commit: true,
                     style: {
                         color: 'gold',
