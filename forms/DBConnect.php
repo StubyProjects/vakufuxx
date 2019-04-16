@@ -1,5 +1,5 @@
 <?php
-//ACHTUNG NICHT HOCHLADEN VORHER VON FTP HOLEN
+
 require 'vendor/autoload.php';
 require 'env.php';
 class DBConnect
