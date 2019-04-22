@@ -20,11 +20,10 @@ function retryValidation() {
 //ReviewCode Validation
 $('#activateReview').click(function() {
     let reviewValue = $("#CodeValue").val();
-    console.log(reviewValue);
+
     $.ajax({
-        url: 'forms/reviewController',
+        url: 'forms/reviewController.php',
         type: 'POST',
-        dataType: 'json',
         data: {
             'reviewValue': reviewValue
         },
