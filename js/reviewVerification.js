@@ -24,6 +24,7 @@ $('#activateReview').click(function() {
     $.ajax({
         url: 'forms/reviewController',
         type: 'POST',
+        dataType: 'json',
         data: {
             'reviewValue': reviewValue
         },
