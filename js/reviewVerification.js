@@ -23,7 +23,7 @@ $('#activateReview').click(function() {
 
     $.ajax({
         url: 'forms/reviewController.php',
-        type: 'POST',
+        type: 'post',
         data: {
             'reviewValue': reviewValue
         },
