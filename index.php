@@ -1,5 +1,6 @@
 <?php include "views/layout/header.php"; ?>
 <?php include "forms/reviewEvaluation.php"; ?>
+<?php include "forms/reviewController.php" ?>
 <?php if(isset($_GET["accept-cookies"])) {
     setcookie("accept-cookies", "true", time() + (60*60*24+365));
 }

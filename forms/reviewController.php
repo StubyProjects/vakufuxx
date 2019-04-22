@@ -5,10 +5,6 @@
  * Date: 25.03.2019
  * Time: 19:14
  */
-if($_SERVER['REQUEST_METHOD'] != 'POST') {
-    header('Location: ../index');
-    exit();
-}
 
 include_once "DBConnect.php";
 
