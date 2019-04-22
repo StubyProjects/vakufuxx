@@ -27,7 +27,7 @@ $('#activateReview').click(function() {
             'reviewValue': reviewValue
         },
         success: function (responseJSON) {
-
+            console.log(responseJSON);
             let responseAsObj = JSON.parse(responseJSON);
 
             if(responseAsObj.isValid) {
