@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
     exit();
 }
 
-include "DBConnect.php";
+include_once $_SERVER["DOCUMENT_ROOT"]."/forms/DBConnect.php";
 
 function getReviewTemplate($name, $code) {
     return '<h4>Rezension verfassen</h4>
