@@ -1,6 +1,6 @@
 <?php
 require $_SERVER["DOCUMENT_ROOT"].'/vendor/autoload.php';
-require 'env.php';
+require $_SERVER["DOCUMENT_ROOT"].'/env.php';
 class DBConnect
 {
     private $servername;
