@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
     header('Location: ../index');
     exit();
 }
-
+require "vendor/autoload.php";
 include_once "DBConnect.php";
 
 function getReviewTemplate($name, $code) {
