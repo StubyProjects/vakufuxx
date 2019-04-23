@@ -1,5 +1,5 @@
 <?php
-require $_SERVER["DOCUMENT_ROOT"].'vendor/autoload.php';
+require $_SERVER["DOCUMENT_ROOT"].'/vendor/autoload.php';
 require $_SERVER["DOCUMENT_ROOT"].'/env.php';
 class DBConnect
 {
@@ -8,7 +8,6 @@ class DBConnect
     private $password;
     private $dbname;
     private $charset;
-
     public function connect() {
         $this->servername = getenv('DB_SERVERNAME_PC');
         $this->username = getenv('DB_USERNAME_PC');
@@ -23,7 +22,5 @@ class DBConnect
         } catch(PDOException $e) {
             return false;
         }
-
     }
-
 }
