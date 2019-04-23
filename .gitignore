@@ -1,7 +1,6 @@
 #project dependencies
 vendor
 Bilder
-forms
 composer.json
 composer.lock
 
