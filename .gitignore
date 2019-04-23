@@ -3,3 +3,7 @@ vendor
 Bilder
 composer.json
 composer.lock
+
+#nicht aktualisieren
+forms/DBConnect.php
+.idea/
