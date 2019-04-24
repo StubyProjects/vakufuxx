@@ -79,3 +79,16 @@
     height: 80px;
     display: block;
   }
+
+  .vorteile {
+    margin: 50px 0;
+    text-align: left;
+  }
+  .icon-vorteile {
+    height: 50px;
+    width: 50px;
+    background-color: #FFC857;
+    padding: 5px;
+    border-radius: 7px;
+    margin-right: 1rem;
+  }

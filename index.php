@@ -306,12 +306,68 @@
 
         </div>
 
+        <div class="container vorteile">
+            <h1>Ihre Vorteile</h1>
+            <div class="row vorteile">
+
+                <div class="col-12 col-md picturefit">
+                    <div class="media">
+                        <img class="icon-vorteile" src="Bilder/warum/leicht.png" alt="einfach-icon">
+                        <div class="media-body">
+                            <h5>Sehr einfache Handhabung</h5>
+                            <p>Der <span class="gilroy">VAKUFUXX</span> ist sehr einfach anwendbar.<br />
+                                Einfach aufstecken und staubsaugen.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-12 col-md picturefit">
+                    <div class="media">
+                        <img class="icon-vorteile" src="Bilder/warum/konfiguriert.png" alt="einfach-icon">
+                        <div class="media-body">
+                            <h5>Perfekt konfiguriert</h5>
+                            <p>Angepasst an ihren Staubsauger und ihre Staubsaugsituation - frisch für Sie aus dem <span class="gilroy">3D Drucker</span>.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row vorteile">
+
+                <div class="col-12 col-md picturefit">
+                    <div class="media">
+                        <img class="icon-vorteile" src="Bilder/warum/stabil.png" alt="einfach-icon">
+                        <div class="media-body">
+                            <h5>Widerstandsfähiges Material</h5>
+                            <p>Dank dem elastischen Material, ist der Aufsatz praktisch unzerstörbar. <br />
+                                Dadurch hält der Aufsatz auch größerem Druck stand.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md picturefit">
+                    <div class="media">
+                        <img class="icon-vorteile" src="Bilder/warum/kundenservice.png" alt="einfach-icon">
+                        <div class="media-body">
+                            <h5>Kundenservice</h5>
+                            <p>Egal ob Sie Fragen zur Bestellung, Lieferprobleme oder andere Anliegen haben. <br />
+                                <span class="gilroy">Kontaktieren</span> Sie uns einfach!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
     </div>
 </div>
-
-<!-- INFOVIDEO -->
-
-<hr>
 
 <!-- SHOP -->
 

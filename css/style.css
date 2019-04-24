@@ -56,9 +56,6 @@ p {
   .container .col-md-4 {
     margin-top: 50px;
   }
-  .col {
-    border-right: none !important;
-  }
 }
 
 /*****Typographie/Headings*****/
@@ -119,10 +116,6 @@ p {
   text-align: left !important;
 }
 
-/*****Schnellzugrifftabelle*****/
-.col {
-  border-right: 1.2px solid;
-}
 /*****Produktbeschreibung*****/
 
 .imgborder {
