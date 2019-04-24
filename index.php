@@ -275,7 +275,7 @@
         <div class="row rowsmart cardborder">
 
             <div class="col-lg-7 col-12 picturefit">
-                <video class="rounded-right embed-responsive" loop autoplay muted>
+                <video class="rounded-left embed-responsive" loop autoplay muted>
                     <source src="Bilder/passt.mp4" type="video/mp4">
                 </video>
             </div>
@@ -289,7 +289,7 @@
 
         </div>
 
-        <div class="row rowsmart cardborder">
+        <div style="margin-bottom: 0" class="row rowsmart cardborder">
 
           <div class="col-lg-5 col-12 benefit">
             <h1>Verstopftes Gitter?</h1>
@@ -299,7 +299,7 @@
           </div>
 
             <div class="col-lg-7 col-12 picturefit">
-                <video class="rounded-left embed-responsive" loop autoplay muted>
+                <video class="rounded-right embed-responsive" loop autoplay muted>
                     <source src="Bilder/gitter.mp4" type="video/mp4">
                 </video>
             </div>
