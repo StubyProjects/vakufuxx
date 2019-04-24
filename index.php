@@ -250,7 +250,7 @@
           </div>
 
           <div class="col-lg-5 col-12 benefit">
-            <h1>Nichts mehr Verlieren!</h1>
+            <h1>Nichts mehr verlieren!</h1>
             <p class="lead">Gegenstände, die nicht in den Staubsauger gehören, werden auch nicht eingesaugt
             </p>
           </div>
