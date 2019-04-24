@@ -273,11 +273,23 @@
         </div>
 
         <div class="row rowsmart cardborder">
+
             <div class="col-lg-7 col-12 picturefit">
-                <video class="rounded-left embed-responsive" loop autoplay muted>
-                    <source src="Bilder/gitter.mp4" type="video/mp4">
+                <video class="rounded-right embed-responsive" loop autoplay muted>
+                    <source src="Bilder/passt.mp4" type="video/mp4">
                 </video>
             </div>
+
+            <div class="col-lg-5 col-12 benefit">
+                <h1>Passt genau!</h1>
+                <br />
+                <p class="lead">Konfigurieren Sie ihren <span class="gilroy">VAKUFUXX</span> im Shop oder geben Sie ihr Modell an und wir kümmern uns um einen passgenauen Aufsatz entfernen.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row rowsmart cardborder">
 
           <div class="col-lg-5 col-12 benefit">
             <h1>Verstopftes Gitter?</h1>
@@ -285,6 +297,13 @@
                   Dabei sind verschiedene Gittergrößen erhältlich, wobei bei grober Gittergröße dieses seltener verstopft
               </p>
           </div>
+
+            <div class="col-lg-7 col-12 picturefit">
+                <video class="rounded-left embed-responsive" loop autoplay muted>
+                    <source src="Bilder/gitter.mp4" type="video/mp4">
+                </video>
+            </div>
+
         </div>
 
     </div>
