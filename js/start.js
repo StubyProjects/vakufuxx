@@ -5,7 +5,8 @@ jQuery(document).ready(function($) {
         "Ein innovativer Staubsaugeraufsatz",
         "Revolutionieren Sie ihr Staubsaugerlebnis",
         "Verloren gegangene Schätze ohne Risiko ansaugen",
-        "Passt genau auf ihren Staubsauger"
+        "Passt genau auf ihren Staubsauger",
+        "Lösen Sie das Problem bevor es passiert"
     ];
 
     function getRandom() {
