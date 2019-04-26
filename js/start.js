@@ -5,25 +5,32 @@ jQuery(document).ready(function($) {
         "Ein innovativer Staubsaugeraufsatz",
         "Revolutionieren Sie ihr Staubsaugerlebnis",
         "Verloren gegangene Schätze ohne Risiko ansaugen",
-        "Passt genau auf ihren Staubsauger",
-        "Lösen Sie das Problem bevor es passiert"
+        "Lösen Sie das Problem bevor es passiert",
+        "Passt genau auf ihren Staubsauger"
     ];
-
-    function getRandom() {
-        return Math.round(Math.random() * quotes.length);
-    }
 
     function hideAnimation() {
         $("#quotes").toggleClass("hideQuote");
     }
 
-    function changeQuote() {
-        $("#quotes").html(quotes[getRandom()]);
+    function setQuote(quoteNumber) {
+        $("#quotes").html(quotes[quoteNumber]);
         setTimeout(hideAnimation, 5000);
         setTimeout(hideAnimation, 7000);
     }
-    changeQuote();
-    setInterval(changeQuote, 7000);
+
+   setQuote(0);
+    (function changeQuote (i) {
+        setTimeout(function () {
+            setQuote(i);
+            i++;
+            if(i < quotes.length) {
+                changeQuote(i);
+            } else {
+                changeQuote(0);
+            }
+        }, 7000);
+    })(1);
 
     //reviewscroll
 
@@ -33,7 +40,6 @@ jQuery(document).ready(function($) {
         } else {
             $("html, body").animate({"scrollTop": 800},800,"swing");
         }
-
     }
 
     if(location.hash === '#reviews') {
