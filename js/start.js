@@ -13,23 +13,31 @@ jQuery(document).ready(function($) {
         $("#quotes").toggleClass("hideQuote");
     }
 
+    //changes quote on start page, fades out after 5 seconds and fades back in after 7 seconds while changeQuote is getting executed
     function setQuote(quoteNumber) {
         $("#quotes").html(quotes[quoteNumber]);
         setTimeout(hideAnimation, 5000);
         setTimeout(hideAnimation, 7000);
     }
 
+    //initial execution of setQuote
    setQuote(0);
     (function changeQuote (i) {
+        //After 7 seconds the quote gets changed in a recursive call dependent on the size of the quote array.
+        //It restarts after the last element of the array is shown
         setTimeout(function () {
+            //recursive call of setQuote
             setQuote(i);
             i++;
+            //while i is within the range of the array the changeQuote function gets called till the last element is shown
             if(i < quotes.length) {
                 changeQuote(i);
             } else {
+                //after the last quote shows the recursion will start over
                 changeQuote(0);
             }
         }, 7000);
+        //parameter 1 is the first index because 0 already is passed above and in the else block.
     })(1);
 
     //reviewscroll
