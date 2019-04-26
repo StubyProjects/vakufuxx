@@ -45,7 +45,7 @@
         <div class="list-group">
             <a class="footergroup"> <i class="far fa-envelope"></i> info@vakufuxx.de </a>
             <p class="footergroup hint"> Diese Seite befindet sich im Aufbau, wir bitten Sie um Verständnis.</p>
-            <p class="footergroup hint"> Logos by https://icons8.de/.</p>
+            <p class="footergroup hint"> Logos by <a href="https://icons8.de/">icons8</a></p>
         </div>
 
       </div>
