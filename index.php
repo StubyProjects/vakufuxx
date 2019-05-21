@@ -628,7 +628,6 @@
           </div>
 
           <button type="submit" class="btn actionbtn">Senden</button>
-
           <div id="msgdiv" class="mt-3">
 
           </div>

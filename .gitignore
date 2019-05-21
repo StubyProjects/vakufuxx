@@ -7,3 +7,4 @@ composer.lock
 #nicht aktualisieren
 .idea/
 .env
+forms/captchaHandler.php

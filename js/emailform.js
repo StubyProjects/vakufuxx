@@ -1,7 +1,6 @@
 jQuery(document).ready(function($) {
 
     $("#emailformular").submit(function(e) {
-        
         e.preventDefault();
 
         let name = $("#Name");
@@ -26,7 +25,7 @@ jQuery(document).ready(function($) {
             validation = true;
         }
 
-        if (validation == true) { //Sobald ein Eintrag nicht mehr den Anforderungen enspricht wird das Formular nicht abgesendet siehe Unten
+        if (validation === true) { //Sobald ein Eintrag nicht mehr den Anforderungen enspricht wird das Formular nicht abgesendet siehe Unten
 
             let email = $("#email");
             let emailvalue = email.val();
@@ -45,7 +44,7 @@ jQuery(document).ready(function($) {
             }
         }
 
-        if (validation == true) {
+        if (validation === true) {
             
             let text = $("#text");
             let textvalue = text.val();
@@ -64,7 +63,7 @@ jQuery(document).ready(function($) {
                 validation = false;
             }
         }
-        if(validation == true) {
+        if(validation === true) {
 
             let form = $(this);
             let url = form.attr("action");
@@ -79,14 +78,36 @@ jQuery(document).ready(function($) {
                 data[name] = inputval;
             });
 
-            $.ajax({
-                url: url,
-                type: method,
-                data: data,
-                success: function(res) {
-                    msgdiv.html(res);
-                }
+            function sendMail() {
+                $.ajax({
+                    url: url,
+                    type: method,
+                    data: data,
+                    success: function(res) {
+                        msgdiv.html(res);
+                    }
+                });
+            }
+
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6LdowKQUAAAAANQnIGN8lSjCh6ugsCrVH1OiF061', {action: 'homepage'}).then(function(token) {
+                    $.ajax({
+                        url: "forms/captchaHandler.php",
+                        type: "POST",
+                        data: {
+                            'token': token
+                        },
+                        success: function (captchaStatus) {
+                            if(captchaStatus) {
+                                sendMail();
+                            } else {
+                                msgdiv.html("Du bist ein Roboter")
+                            }
+                        }
+                    })
+                });
             });
+
         }
     });
 
