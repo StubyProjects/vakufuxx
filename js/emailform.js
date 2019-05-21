@@ -90,7 +90,7 @@ jQuery(document).ready(function($) {
             }
 
             grecaptcha.ready(function() {
-                grecaptcha.execute('6LdowKQUAAAAANQnIGN8lSjCh6ugsCrVH1OiF061', {action: 'homepage'}).then(function(token) {
+                grecaptcha.execute('6Lebv6QUAAAAAC-64C5q2QqZ181rDRwXfzD3OyJz', {action: 'homepage'}).then(function(token) {
                     $.ajax({
                         url: "forms/captchaHandler.php",
                         type: "POST",
