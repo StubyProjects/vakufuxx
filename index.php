@@ -283,7 +283,7 @@
             <div class="col-lg-5 col-12 benefit">
                 <h1>Passt genau!</h1>
                 <br />
-                <p class="lead">Konfigurieren Sie ihren <span class="gilroy">VAKUFUXX</span> im Shop, oder geben Sie ihr Modell an und wir fertigen einen passgenauen Aufsatz für Sie!.
+                <p class="lead">Konfigurieren Sie ihren <span class="gilroy">VAKUFUXX</span> im Shop, oder geben Sie ihr Modell an und wir fertigen einen passgenauen Aufsatz für Sie!
                 </p>
             </div>
 
