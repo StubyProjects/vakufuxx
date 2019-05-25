@@ -293,7 +293,7 @@
 
           <div class="col-lg-5 col-12 benefit">
             <h1>Verstopftes Gitter?</h1>
-            <br><p class="lead">Falls das Gitter verstopft einfach mit dem Staubsauger absaugen.<br/>
+            <br><p class="lead">Falls das Gitter verstopft, einfach mit dem Staubsauger absaugen.<br/>
                   Dabei sind verschiedene Gittergrößen erhältlich, wobei bei grober Gittergröße dieses seltener verstopft
               </p>
           </div>
