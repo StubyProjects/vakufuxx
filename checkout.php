@@ -206,7 +206,7 @@ $preis = $calculatePrice + 1.99;
                 'transactionProducts': [{
                     'sku': '1',
                     'name': 'Vakufuxx <?php echo $farbe?>' ,
-                    'price': 7.99,
+                    'price': 9.99,
                     'quantity': <?php echo $anzahl ?>
                 }]
             });
