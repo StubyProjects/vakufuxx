@@ -81,6 +81,7 @@ jQuery(document).ready(function($) {
   $('#anzahl').change(function() {
     let quantity = $('#anzahl').val();
     let price = quantity * 6;
-    $('#disprice').text(price + 1.99 + " €");
+
+    $('#disprice').text(Number(price + 3.99).toFixed(2) + " €");
   });
 });

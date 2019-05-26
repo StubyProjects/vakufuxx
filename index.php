@@ -448,7 +448,7 @@
               </div>
 
               <div class="col-6">
-                  <p id="disprice" class="gilroyL">7.99 €</p>
+                  <p id="disprice" class="gilroyL">9.99 €</p>
                   <p class="text-success shipping"> Versandkostenfrei </p>
               </div>
           </div>
