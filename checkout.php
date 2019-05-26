@@ -55,7 +55,7 @@ $gitter = $_POST["gittergröße"];
 
 $calculatePrice = $anzahl * 6;
 
-$preis = $calculatePrice + 1.99;
+$preis = $calculatePrice + 3.99;
 
 ?>
 
