@@ -479,6 +479,10 @@
                                   <label onclick="colorchange('schwarz');" for="schwarz"><span></span></label>
                               </div>
                               <div>
+                                  <input data-image="grau" type="radio" id="grau" name="color" value="grau">
+                                  <label onclick="colorchange('grau');" for="grau"><span></span></label>
+                              </div>
+                              <div>
                                   <input data-image="blau" type="radio" id="blau" name="color" value="blau">
                                   <label onclick="colorchange('blau');" for="blau"><span></span></label>
                               </div>
