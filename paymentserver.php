@@ -9,6 +9,7 @@ require "forms/transactionMail.php";
 require "forms/boot.php";
 include_once "forms/DBConnect.php";
 require "sendReviewRequestMail.php";
+require "addToSendGrid.php";
 
 //DATENÜBERMITTLUNG
 $configdata = $_POST["configdata"];
@@ -103,8 +104,18 @@ $result = $gateway->transaction()->sale([
       $safeNewCostumer = $dbconnect->connect()->prepare($sql);
       $safeNewCostumer->execute(['code' => $bestellnummer, 'name' => $firstName]);
 
+      $request_body = json_decode('[
+          {
+            "email": '.$costumerEmail.',
+            "first_name": '.$firstName.',
+            "last_name": '.$lastName.',
+            "is_customer": "true"
+          }
+        ]');
+
       sendTransactionMail($content, $bestellnummer);
       sendScheduledReviewMail($firstName, $costumerEmail, time());
+      addToSendGrid($request_body);
 
   } else {
     print_r("Error Message: " . $result->message);
