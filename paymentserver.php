@@ -106,9 +106,9 @@ $result = $gateway->transaction()->sale([
 
       $request_body = json_decode('[
           {
-            "email": '.$costumerEmail.',
-            "first_name": '.$firstName.',
-            "last_name": '.$lastName.',
+            "email": "'.$costumerEmail.'",
+            "first_name": "'.$firstName.'",
+            "last_name": "'.$lastName.'",
             "is_customer": "true"
           }
         ]');
