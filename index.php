@@ -83,7 +83,7 @@
 
 </div>
 
-<div class="container-fluid mt-5">
+<div id="newsletter "class="container-fluid mt-5">
     <div class="container cardborder">
         <div class="p-5">
             <h1 class="text-left mt-3">Tragen Sie sich in unseren Newsletter ein!</h1>
