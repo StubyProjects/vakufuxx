@@ -57,6 +57,13 @@ $calculatePrice = $anzahl * 6;
 
 $preis = $calculatePrice + 3.99;
 
+if(true) {
+
+    $preis = 8.49;
+
+
+}
+
 ?>
 
 <div class="container-fluid section-padding mt-5">
