@@ -128,6 +128,14 @@ $preis = $calculatePrice + 3.99;
                     </div>
 
                     <div class="productproperty">
+                        <h1 id="dia" class="propertyheading">
+                            Haben Sie einen Rabattcode ?
+                        </h1>
+                        <input class="form-control" type="text" id="discount" name="discount" placeholder="Tragen Sie hier ihren Rabattcode ein">
+                        <a href="https://vakufuxx.de/#newsletter">So bekomme ich einen Rabattcode</a>
+                    </div>
+
+                    <div class="productproperty">
                         <a href="index#shop" style="color: #333333" class="actionbtn btn">
                             Zurück zur Konfiguration
                         </a>
