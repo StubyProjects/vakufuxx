@@ -80,8 +80,11 @@ jQuery(document).ready(function($) {
 
   $('#anzahl').change(function() {
     let quantity = $('#anzahl').val();
+
+    let discount = $('#priceAfterDiscount').val();
+
     let price = quantity * 6;
 
-    $('#disprice').text(Number(price + 3.99).toFixed(2) + " €");
+    $('#disprice').text(Number((price + 3.99) * discount).toFixed(2) + " €");
   });
 });

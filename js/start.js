@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
         //parameter 1 is the first index because 0 already is passed above and in the else block.
     })(1);
 
-    //reviewscroll
+    //newsletterscroll
 
     function scrollToReviewEvent() {
         if(screen.width > 1000) {

@@ -17,8 +17,6 @@ if($_POST) {
     $dbconnect = new DBConnect();
     $submittedMail = $_POST['emailvalue'];
 
-
-
     $addNewDisCount = $dbconnect->connect()->prepare($addSql);
 
     try {
@@ -37,8 +35,5 @@ if($_POST) {
         echo $getCode["promocode"];
 
     }
-
-
-
 
 }

@@ -1,5 +1,6 @@
 <?php
 include "views/layout/header.php";
+
 ?>
 
 
@@ -44,6 +45,10 @@ include "views/layout/header.php";
                     Ihr Code lautet
                 </h1>
                 <input id="discountCode" class="form-control" type="text" name="discount" disabled="disabled" value="">
+
+                <a href="https://vakufuxx.de/#shop" style="color: #333333" class="mt-3 actionbtn btn">
+                    Zum Shop
+                </a>
             </div>
 
         </div>

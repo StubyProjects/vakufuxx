@@ -8,7 +8,6 @@ require_once "env.php";
 require "forms/transactionMail.php";
 require "forms/boot.php";
 include_once "forms/DBConnect.php";
-require "sendReviewRequestMail.php";
 
 //DATENÜBERMITTLUNG
 $configdata = $_POST["configdata"];
@@ -21,6 +20,7 @@ $firstName = $details["firstName"];
 $lastName = $details["lastName"];
 $streetAdress = $details["shippingAddress"]["line1"];
 $costumerEmail = $details["email"];
+
 
 /*versichert dass weitere Adressinfo übergeben wurde */
 function line2() {
@@ -43,10 +43,12 @@ $anzahl = $configdata["anzahl"];
 $farbe = $configdata["farbe"];
 $modell = $configdata["modell"];
 $gitter = $configdata["gitter"];
+$discountCode = $configdata["discountCode"];
 
 function sendTransactionMail($content, $bestellnummer) {
     global $costumerEmail;
     global $firstName;
+    global $discountCode;
 
     $email = new \SendGrid\Mail\Mail();
     $email->setFrom("bestellung@vakufuxx.de", "Vakufuxx");
@@ -103,9 +105,15 @@ $result = $gateway->transaction()->sale([
       $safeNewCostumer = $dbconnect->connect()->prepare($sql);
       $safeNewCostumer->execute(['code' => $bestellnummer, 'name' => $firstName]);
 
+      if($discountCode != "") {
+          $sqlUpdateCode = "UPDATE discount SET used_code = ? WHERE promocode = ?";
+
+          $prepareUpdate = $dbconnect->connect()->prepare($sqlUpdateCode);
+          $prepareUpdate->execute([true, $discountCode]);
+
+      }
 
       sendTransactionMail($content, $bestellnummer);
-      sendScheduledReviewMail($firstName, $costumerEmail, time());
 
 
   } else {

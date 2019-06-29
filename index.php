@@ -83,8 +83,8 @@
 
 </div>
 
-<div id="newsletter "class="container-fluid mt-5">
-    <div class="container cardborder">
+<div class="container-fluid mt-5">
+    <div id="newsletter" class="container cardborder">
         <div class="p-5">
             <h1 class="text-left mt-3">Tragen Sie sich in unseren Newsletter ein!</h1>
 
@@ -521,9 +521,27 @@
               </p>
           </div>
 
+
+          <div class="productproperty">
+              <h1 id="dia" class="propertyheading">
+                  Haben Sie einen Rabattcode ?
+              </h1>
+
+              <input class="form-control" type="text" id="discountCode" name="discount" placeholder="Ihr Rabattcode">
+              <div id="codefeedback" class="invalid-feedback">
+                  Dieser Code ist ungültig
+              </div>
+
+              <div class="mt-2" style="text-align: start">
+                  <div id="checkDiscount" class="btn actionbtn">Rabattcode aktivieren</div>
+                  <a class="gilroyL" href="#newsletter">So bekomme ich einen Rabattcode</a>
+              </div>
+          </div>
+
 	    <div class="shopline"></div>
 
           <form id="payment" action="checkout.php" method="post">
+
               <div class="row">
                   <div class="col-lg-7">
                       <div style="" class="product-color productproperty">
@@ -576,6 +594,10 @@
                      </div>
                  </div>
               </div>
+
+              <input type="hidden" id="priceAfterDiscount" name="priceAfterDiscount" value="1">
+
+              <input type="hidden" id="validDiscountCode" name="validDiscountCode" value="">
 
               <div class="row">
                   <div class="col-lg-7">
@@ -718,6 +740,46 @@ if(!isset($_COOKIE["accept-cookies"])) { ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
 <script src="js/reviewVerification.js"></script>
 <script>
+
+    let discountCode = $("#discountCode");
+
+    $("#checkDiscount").click(function() {
+        $.ajax({
+            url: 'discountChecker.php',
+            type: 'post',
+            data: {
+                'discountCode': discountCode.val()
+            },
+            success: function(validCode) {
+
+                console.log(validCode);
+
+                if(discountCode.val() === validCode) {
+
+                    discountCode.addClass("is-valid");
+                    discountCode.removeClass("is-invalid");
+                    $("#codefeedback").css("display", "none");
+
+                    $("#priceAfterDiscount").val(0.85);
+
+                    $("#validDiscountCode").val(validCode);
+
+                    let quantity = $('#anzahl').val();
+                    let price = quantity * 6;
+
+                    $('#disprice').text(Number((price + 3.99) * .85).toFixed(2) + " €");
+
+                } else {
+
+                    discountCode.removeClass("is-valid");
+                    discountCode.addClass("is-invalid");
+                    $("#codefeedback").css("display", "block");
+
+                }
+            }
+        });
+    });
+
     let rating = <?php echo getEvaluation() ?>;
     let reviewCount = <?php echo getCountOfTotalReviews() ?>;
     let comments = <?php echo getComments() ?>;

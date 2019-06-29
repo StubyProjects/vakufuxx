@@ -41,6 +41,8 @@ require "forms/boot.php";
 
 <?php
 
+$discountCode = $_POST["validDiscountCode"];
+
 $farbe = $_POST["color"];
 
 $modell = $_POST["modell"];
@@ -55,7 +57,9 @@ $gitter = $_POST["gittergröße"];
 
 $calculatePrice = $anzahl * 6;
 
-$preis = $calculatePrice + 3.99;
+$discount = $_POST["priceAfterDiscount"];
+
+$preis = sprintf("%.2f", ($calculatePrice + 3.99) * $discount);
 
 ?>
 
@@ -127,14 +131,15 @@ $preis = $calculatePrice + 3.99;
                         <input class="form-control" type="text" id="anzahl" name="anzahl" disabled="disabled" value="<?php echo $anzahl ?>">
                     </div>
 
+                    <?php if($discountCode != ""): ?>
                     <div class="productproperty">
                         <h1 id="dia" class="propertyheading">
-                            Haben Sie einen Rabattcode ?
+                           Ihr Rabattcode
                         </h1>
-                        <input class="form-control" type="text" id="discount" name="discount" placeholder="Tragen Sie hier ihren Rabattcode ein">
-                        <a href="https://vakufuxx.de/#newsletter">So bekomme ich einen Rabattcode</a>
-                    </div>
 
+                        <input class="form-control" type="text" id="discountCode" name="discount" disabled="disabled" placeholder="<?php echo $discountCode ?>">
+                    </div>
+                    <?php endif; ?>
                     <div class="productproperty">
                         <a href="index#shop" style="color: #333333" class="actionbtn btn">
                             Zurück zur Konfiguration
@@ -192,6 +197,7 @@ $preis = $calculatePrice + 3.99;
 
 <script type="text/javascript">
 
+
     jQuery(document).ready(function($) {
 
         let client_token = "<?php echo($gateway->ClientToken()->generate());?>";
@@ -226,7 +232,7 @@ $preis = $calculatePrice + 3.99;
         let modell = $("#modell").val();
         let gitter = $("#gitter").val();
         let price = <?php echo $preis ?>;
-
+        let discountCode = "";
 
         braintree.client.create({
             authorization: client_token,
@@ -278,14 +284,18 @@ $preis = $calculatePrice + 3.99;
                     },
 
                     onAuthorize: function (data) {
+                        <?php if($discountCode != ""): ?>
+                        discountCode = "<?php echo $discountCode ?>";
+                        <?php endif;?>
                         let info = {
                             'amount': price,
                             'anzahl': anzahl,
                             'farbe': farbe,
                             'gitter': gitter,
-                            'modell': modell
+                            'modell': modell,
+                            'discountCode': discountCode
                         };
-
+                        console.log(info);
                         return paypalCheckoutInstance.tokenizePayment(data, function (err, payload) {
                             //LoaderAnimation
                             transactionLoader();
