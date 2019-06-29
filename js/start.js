@@ -44,13 +44,13 @@ jQuery(document).ready(function($) {
 
     function scrollToReviewEvent() {
         if(screen.width > 1000) {
-            $("html, body").animate({"scrollTop": 1000},800,"swing");
+            $("html, body").animate({"scrollTop": 1200},800,"swing");
         } else {
             $("html, body").animate({"scrollTop": 800},800,"swing");
         }
     }
 
-    if(location.hash === '#reviews') {
+    if(location.hash === '#newsletter') {
         scrollToReviewEvent();
     }
 
