@@ -90,7 +90,7 @@
 
             <p class="lead para">
                 Hier werden wir Sie über News,
-                Innovationen und neue Produktideen auf dem laufenden halten. <br/> Außerdem erhalten Sie <b class="gilroy">kostenlose Beratung</b> und Anwendungsmöglichkeiten für den <b class="gilroy">VAKUFUXX</b>.
+                Innovationen und neue Produktideen auf dem laufenden halten. <br/> Sie erhalten eine <b class="gilroy">kostenlose Beratung</b> und wir zeigen Ihnen detaillierte Anwendungsmöglichkeiten für den <b class="gilroy">VAKUFUXX</b>.
                 <br/>Darüber hinaus erhalten Sie einen <b class="gilroy">15% Gutschein!</b>
             </p>
 
